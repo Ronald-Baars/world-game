@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Pixel Art';
+  src: url('fonts/Pixel-Art.eot');
+  src: url('fonts/Pixel-Art.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Pixel-Art.woff2') format('woff2'),
+    url('fonts/Pixel-Art.woff') format('woff'),
+    url('fonts/Pixel-Art.ttf') format('truetype'),
+    url('fonts/Pixel-Art.svg#Pixel-Art') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Pixel Art';
+  user-select: none;
+}
+
+canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
