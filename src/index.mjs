@@ -5,15 +5,15 @@ import Engine from './engine/index.mjs';
 import assetLoader from './helpers/assetLoader.mjs';
 
 // Make a place where we store all assets
-const assets = [];
+const assets = {};
 
 // Preload all the assets we will need during the game
 const preloader = (callback) => {
 
-  const assetsToLoad = [
-    { id: 'player', src: 'sprites/characters/player.png' },
-    { id: 'dirt', src: 'sprites/land/dirt.png' },
-  ];
+  const assetsToLoad = {
+    'player': 'sprites/characters/player.png',
+    'dirt': 'sprites/land/dirt.png'
+  };
 
   const onLoadComplete = (loadedAssets) => {
     // Disable the loading state
@@ -21,7 +21,7 @@ const preloader = (callback) => {
     document.getElementById('preloader').remove();
 
     // Add the loaded assets to the assets array
-    assets.push(...loadedAssets);
+    Object.assign(assets, loadedAssets);
 
     // Start the game
     callback();
@@ -40,7 +40,7 @@ preloader(() => {
 
   // Set up the render and update functions for the engine
   const render = () => {
-    view.render();
+    view.render(model.renderer.canvas);
   };
 
   // This runs every frame to update all the elements in the game
@@ -55,10 +55,6 @@ preloader(() => {
 
   // Set up the engine
   const engine = new Engine(30, render, update);
-
-  // Set the dimentions of the buffer canvas to the dimentions of the world
-  view.buffer.canvas.width = model.world.width;
-  view.buffer.canvas.height = model.world.height;
 
   // Add event listeners
   const handleKey = ({ type, key }) => {

@@ -1,4 +1,4 @@
-const importer = ({ id, src }) => {
+const importer = ([id, src]) => {
   return new Promise((resolve, reject) => {
     const image = new Image();
     image.addEventListener('load', () => resolve({ id, image }));
@@ -7,6 +7,11 @@ const importer = ({ id, src }) => {
   });
 };
 
-export default (assets, onComplete) => {
-  Promise.all(assets.map(importer)).then((images) => onComplete(images));
-};
+export default (assets, callback) => Promise.all(Object.entries(assets).map(importer)).then((images) => {
+  const imageList = {};
+
+  images.forEach(({ id, image }) => imageList[id] = image);
+
+  callback(imageList);
+  return;
+});
