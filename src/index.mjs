@@ -61,8 +61,12 @@ preloader(() => {
   view.buffer.canvas.height = model.world.height;
 
   // Add event listeners
-  window.addEventListener('keydown', controller.handleKey);
-  window.addEventListener('keyup', controller.handleKey);
+  const handleKey = ({ type, key }) => {
+    controller.handleKey({ type, key });
+  };
+
+  window.addEventListener('keydown', handleKey);
+  window.addEventListener('keyup', handleKey);
 
   // Start the engine
   engine.start();

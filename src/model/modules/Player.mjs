@@ -10,8 +10,21 @@ class Player {
   }
 
   update() {
-    console.log(this.verVelocity);
+
   };
+
+  moveLeft() {
+    console.log('Moving left');
+  }
+
+  moveRight() {
+
+    console.log('Moving Right');
+  }
+
+  jump() {
+    console.log('jumping');
+  }
 }
 
 export default Player;
