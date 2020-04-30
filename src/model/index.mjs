@@ -1,7 +1,8 @@
 import World from './modules/World.mjs';
 
 class Model {
-  constructor(brand) {
+  constructor(assets) {
+    this.assets = assets;
     this.world = new World();
   }
 
