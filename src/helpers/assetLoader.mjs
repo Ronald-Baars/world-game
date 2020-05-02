@@ -1,17 +1,26 @@
 const importer = ([id, src]) => {
   return new Promise((resolve, reject) => {
-    const image = new Image();
-    image.addEventListener('load', () => resolve({ id, image }));
-    image.addEventListener('error', () => reject({ id, image: null }));
-    image.src = `../assets/${src}`;
+
+    if (src.includes('.png')) {
+      const image = new Image();
+      image.addEventListener('load', () => resolve({ id, asset: image }));
+      image.addEventListener('error', () => reject({ id, asset: null }));
+      image.src = `../assets/${src}`;
+    } else if (src.includes('.json')) {
+      fetch(`../assets/${src}`)
+        .then(response => response.json())
+        .then(data => resolve({ id, asset: data }))
+        .catch(() => reject({ id, asset: null }));
+    }
+
   });
 };
 
-export default (assets, callback) => Promise.all(Object.entries(assets).map(importer)).then((images) => {
-  const imageList = {};
+export default (assets, callback) => Promise.all(Object.entries(assets).map(importer)).then((assets) => {
+  const assetList = {};
 
-  images.forEach(({ id, image }) => imageList[id] = image);
+  assets.forEach(({ id, asset }) => assetList[id] = asset);
 
-  callback(imageList);
+  callback(assetList);
   return;
 });

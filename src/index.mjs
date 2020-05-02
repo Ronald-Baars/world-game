@@ -11,8 +11,9 @@ const assets = {};
 const preloader = (callback) => {
 
   const assetsToLoad = {
-    'player': 'sprites/characters/player.png',
-    'dirt': 'sprites/land/dirt.png'
+    'sprite_player': 'sprites/characters/player.png',
+    'sprite_player_data': 'sprites/characters/player.json',
+    'sprite_dirt': 'sprites/land/dirt.png'
   };
 
   const onLoadComplete = (loadedAssets) => {
@@ -40,7 +41,7 @@ preloader(() => {
 
   // Set up the render and update functions for the engine
   const render = () => {
-    view.render(model.renderer.canvas);
+    view.render(model.renderer.canvas, model.world.player);
   };
 
   // This runs every frame to update all the elements in the game
