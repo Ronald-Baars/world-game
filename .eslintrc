@@ -1,9 +1,35 @@
 {
-  "extends": "standard",
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "__dirname": "readonly",
+    "require": "readonly"
+  },
   "rules": {
     "semi": [
       2,
       "always"
+    ],
+    "quotes": [
+      2,
+      "backtick",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "node/no-extraneous-require": [
+      "error",
+      {
+        "allowModules": [
+          "chalk"
+        ]
+      }
     ]
   }
 }

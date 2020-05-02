@@ -18,7 +18,7 @@ class Player {
 
     this.isStatic = false;
 
-    this.renderer = document.createElement('canvas').getContext('2d');
+    this.renderer = document.createElement(`canvas`).getContext(`2d`);
     this.renderer.canvas.width = this.width;
     this.renderer.canvas.height = this.height;
 
@@ -26,10 +26,11 @@ class Player {
     this.positionY = spawnY;
 
     // Set Player specific variables
-    this.horVelocity = 0;
+    this.horVelocity = 1;
     this.verVelocity = 0;
     this.isJumping = false;
-    this.animation = "walk_right";
+    this.animation = `stand`;
+    this.direction = `right`;
     this.animationFrame = 0;
     this.walkSpeed = 1.1;
     this.jumpHeight = 20;
@@ -43,20 +44,21 @@ class Player {
     this.positionY = Math.round(this.positionY + this.verVelocity);
 
     this.render();
-  };
+  }
 
   switchAnimation() {
-    if (this.horVelocity > 1) {
-      this.animation = 'walk_right';
-    } else if (this.horVelocity < -1) {
-      this.animation = 'walk_left';
+    this.direction = this.horVelocity > 0 ? `right` : `left`;
+
+    if (Math.abs(this.horVelocity) > 1) {
+      this.animation = `walk`;
     } else {
-      this.animation = 'stand';
+      this.animation = `stand`;
     }
   }
 
   render() {
-    const spritePosition = getSpriteFromSpritesheet(this.animation, this.sprite, Math.floor(this.animationFrame));
+    const spritePosition = getSpriteFromSpritesheet(this.animation, this.direction, this.sprite, Math.floor(this.animationFrame));
+
 
     this.switchAnimation();
     // Draw the sprite

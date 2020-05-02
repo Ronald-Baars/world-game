@@ -16,7 +16,7 @@ class Ground {
     this.isSolid = true;
     this.isTouched = false;
 
-    this.renderer = document.createElement('canvas').getContext('2d');
+    this.renderer = document.createElement(`canvas`).getContext(`2d`);
     this.renderer.canvas.width = this.width;
     this.renderer.canvas.height = this.height;
 
@@ -28,10 +28,10 @@ class Ground {
 
   update() {
     this.render();
-  };
+  }
 
   render() {
-    var pattern = this.renderer.createPattern(this.spriteSheet, 'repeat'); // Create a pattern with this image, and set it to "repeat".
+    var pattern = this.renderer.createPattern(this.spriteSheet, `repeat`); // Create a pattern with this image, and set it to "repeat".
     this.renderer.fillStyle = pattern;
     this.renderer.fillRect(0, 0, this.width, this.height);
   }

@@ -4,8 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --quiet --exec babel-node server.js",
+    "start": "nodemon --quiet server.mjs --exec 'npm run lint && babel-node server.mjs'",
+    "lint": "eslint --ext .mjs --ext .js .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=12.16.0"
   },
   "author": "Ronald Baars",
   "license": "ISC",
@@ -17,6 +21,8 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.5"
+    "@babel/preset-env": "^7.9.5",
+    "eslint": "^6.8.0",
+    "eslint-plugin-node": "^11.1.0"
   }
 }

@@ -1,12 +1,12 @@
 const importer = ([id, src]) => {
   return new Promise((resolve, reject) => {
 
-    if (src.includes('.png')) {
+    if (src.includes(`.png`)) {
       const image = new Image();
-      image.addEventListener('load', () => resolve({ id, asset: image }));
-      image.addEventListener('error', () => reject({ id, asset: null }));
+      image.addEventListener(`load`, () => resolve({ id, asset: image }));
+      image.addEventListener(`error`, () => reject({ id, asset: null }));
       image.src = `../assets/${src}`;
-    } else if (src.includes('.json')) {
+    } else if (src.includes(`.json`)) {
       fetch(`../assets/${src}`)
         .then(response => response.json())
         .then(data => resolve({ id, asset: data }))

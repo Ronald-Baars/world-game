@@ -5,7 +5,7 @@ class Model {
     this.assets = assets;
     this.world = new World(assets);
 
-    this.renderer = document.createElement('canvas').getContext('2d');
+    this.renderer = document.createElement(`canvas`).getContext(`2d`);
     this.renderer.canvas.width = this.world.width;
     this.renderer.canvas.height = this.world.height;
   }

@@ -47,7 +47,7 @@ class World {
     ];
 
     // Create a canvas to render the world to
-    this.renderer = document.createElement('canvas').getContext('2d');
+    this.renderer = document.createElement(`canvas`).getContext(`2d`);
 
     // Set the size of the canvas
     this.renderer.canvas.width = this.width;
@@ -119,13 +119,13 @@ class World {
     ];
 
     belowPlayer.forEach(element => {
-      element.color = "yellow";
+      element.color = `yellow`;
       this.player.verVelocity = 0;
       this.player.positionY = element.positionY - this.player.height;
     });
 
     abovePlayer.forEach(element => {
-      element.color = "green";
+      element.color = `green`;
       this.player.verVelocity = -this.player.verVelocity;
       this.player.positionY = element.positionY + element.height;
     });
@@ -133,13 +133,13 @@ class World {
     const leftOfPlayer = getElementAtLocation(playerArea().left, playerArea().bottom - this.player.stepHeight, nearby);
     const rightOfPlayer = getElementAtLocation(playerArea().right, playerArea().bottom - this.player.stepHeight, nearby);
     leftOfPlayer.forEach(element => {
-      element.color = "red";
+      element.color = `red`;
       this.player.horVelocity = 0;
       this.player.positionX = element.positionX + element.width - this.player.boundingBox.x;
     });
 
     rightOfPlayer.forEach(element => {
-      element.color = "orange";
+      element.color = `orange`;
       this.player.horVelocity = 0;
       this.player.positionX = element.positionX - (this.player.boundingBox.x + this.player.boundingBox.width);
     });

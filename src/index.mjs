@@ -11,15 +11,15 @@ const assets = {};
 const preloader = (callback) => {
 
   const assetsToLoad = {
-    'sprite_player': 'sprites/characters/player.png',
-    'sprite_player_data': 'sprites/characters/player.json',
-    'sprite_dirt': 'sprites/land/dirt.png'
+    'sprite_player': `sprites/characters/player.png`,
+    'sprite_player_data': `sprites/characters/player.json`,
+    'sprite_dirt': `sprites/land/dirt.png`
   };
 
   const onLoadComplete = (loadedAssets) => {
     // Disable the loading state
     window.loading = false;
-    document.getElementById('preloader').remove();
+    document.getElementById(`preloader`).remove();
 
     // Add the loaded assets to the assets array
     Object.assign(assets, loadedAssets);
@@ -36,7 +36,7 @@ preloader(() => {
 
   // Create the MVC structure
   const model = new Model(assets);
-  const view = new View(document.querySelector('canvas#game'));
+  const view = new View(document.querySelector(`canvas#game`));
   const controller = new Controller();
 
   // Set up the render and update functions for the engine
@@ -64,8 +64,8 @@ preloader(() => {
     controller.handleKey({ type: e.type, key: e.key });
   };
 
-  window.addEventListener('keydown', handleKey);
-  window.addEventListener('keyup', handleKey);
+  window.addEventListener(`keydown`, handleKey);
+  window.addEventListener(`keyup`, handleKey);
 
   // Start the engine
   engine.start();

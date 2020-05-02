@@ -1,8 +1,8 @@
-import log from '../helpers/log.mjs';
+// import log from '../helpers/log.mjs';
 
 class View {
   constructor(canvas) {
-    this.context = canvas.getContext('2d');
+    this.context = canvas.getContext(`2d`);
     this.width = 426;
     this.height = 240;
 

@@ -8,7 +8,7 @@ class Engine {
   }
 
   start() {
-    log('Engine started');
+    log(`Engine started`);
     this.renderFrame();
   }
 
