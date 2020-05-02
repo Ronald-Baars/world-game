@@ -74,8 +74,6 @@ class World {
     // Apply the friction to the player
     this.player.horVelocity = Math.round((this.player.horVelocity * this.friction) * 100) / 100;
 
-    console.log(this.player.horVelocity);
-
     this.player.verVelocity *= this.friction;
 
     // Run the update function

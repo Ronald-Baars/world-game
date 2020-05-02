@@ -31,6 +31,8 @@ class Player {
     this.isJumping = false;
     this.animation = "walk_right";
     this.animationFrame = 0;
+    this.walkSpeed = 1.1;
+    this.jumpHeight = 20;
 
     this.stepHeight = 4;
   }
@@ -67,15 +69,15 @@ class Player {
 
   // User input functions
   moveLeft() {
-    this.horVelocity = Math.floor((this.horVelocity - 1.3) * 100) / 100;
+    this.horVelocity = Math.floor((this.horVelocity - this.walkSpeed) * 100) / 100;
   }
 
   moveRight() {
-    this.horVelocity = Math.floor((this.horVelocity + 1.3) * 100) / 100;
+    this.horVelocity = Math.floor((this.horVelocity + this.walkSpeed) * 100) / 100;
   }
 
   jump() {
-    this.verVelocity -= 20;
+    this.verVelocity -= this.jumpHeight;
   }
 }
 
