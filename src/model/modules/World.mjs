@@ -2,7 +2,6 @@ import getElementAtLocation from '../helpers/getElementAtLocation.mjs';
 import Player from './Player.mjs';
 import Ground from './Ground.mjs';
 
-
 class World {
   constructor(assets) {
 
@@ -16,34 +15,34 @@ class World {
     // Create the objects
     this.player = new Player(assets.sprite_player, assets.sprite_player_data, 100, 50);
     this.level = [
-      new Ground(assets.sprite_dirt, 84, 100),
-      new Ground(assets.sprite_dirt, 84, 92),
-      new Ground(assets.sprite_dirt, 100, 100),
-      new Ground(assets.sprite_dirt, 116, 100),
-      new Ground(assets.sprite_dirt, 132, 100),
-      new Ground(assets.sprite_dirt, 148, 100),
+      new Ground(assets.sprite_dirt, 84, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 84, 92, 16, 8),
+      new Ground(assets.sprite_dirt, 100, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 116, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 132, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 148, 100, 16, 8),
 
       // Stairs
-      new Ground(assets.sprite_dirt, 164, 96),
-      new Ground(assets.sprite_dirt, 180, 92),
-      new Ground(assets.sprite_dirt, 196, 88),
-      new Ground(assets.sprite_dirt, 212, 88),
-      new Ground(assets.sprite_dirt, 228, 92),
-      new Ground(assets.sprite_dirt, 244, 96),
+      new Ground(assets.sprite_dirt, 164, 96, 16, 8),
+      new Ground(assets.sprite_dirt, 180, 92, 16, 8),
+      new Ground(assets.sprite_dirt, 196, 88, 16, 8),
+      new Ground(assets.sprite_dirt, 212, 88, 16, 8),
+      new Ground(assets.sprite_dirt, 228, 92, 16, 8),
+      new Ground(assets.sprite_dirt, 244, 96, 16, 8),
 
       // Platform after stairs
-      new Ground(assets.sprite_dirt, 260, 100),
-      new Ground(assets.sprite_dirt, 276, 100),
-      new Ground(assets.sprite_dirt, 292, 100),
-      new Ground(assets.sprite_dirt, 292, 92),
+      new Ground(assets.sprite_dirt, 260, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 276, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 292, 100, 16, 8),
+      new Ground(assets.sprite_dirt, 292, 92, 800, 8),
 
-      new Ground(assets.sprite_dirt, 0, 80),
-      new Ground(assets.sprite_dirt, 16, 80),
-      new Ground(assets.sprite_dirt, 32, 80),
+      new Ground(assets.sprite_dirt, 0, 80, 16, 8),
+      new Ground(assets.sprite_dirt, 16, 80, 16, 8),
+      new Ground(assets.sprite_dirt, 32, 80, 16, 8),
 
-      new Ground(assets.sprite_dirt, 84, 20),
-      new Ground(assets.sprite_dirt, 100, 20),
-      new Ground(assets.sprite_dirt, 116, 20),
+      new Ground(assets.sprite_dirt, 84, 20, 16, 8),
+      new Ground(assets.sprite_dirt, 100, 20, 16, 8),
+      new Ground(assets.sprite_dirt, 116, 20, 16, 8),
 
     ];
 
@@ -73,7 +72,10 @@ class World {
     this.player.verVelocity += this.gravity;
 
     // Apply the friction to the player
-    this.player.horVelocity *= this.friction;
+    this.player.horVelocity = Math.round((this.player.horVelocity * this.friction) * 100) / 100;
+
+    console.log(this.player.horVelocity);
+
     this.player.verVelocity *= this.friction;
 
     // Run the update function

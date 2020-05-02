@@ -1,7 +1,7 @@
 class Ground {
-  constructor(spriteSheet, x, y) {
-    this.width = 16;
-    this.height = 8;
+  constructor(spriteSheet, x, y, width = 8, height = 8) {
+    this.width = width;
+    this.height = height;
 
     this.spriteSheet = spriteSheet;
 

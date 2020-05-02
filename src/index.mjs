@@ -58,8 +58,10 @@ preloader(() => {
   const engine = new Engine(30, render, update);
 
   // Add event listeners
-  const handleKey = ({ type, key }) => {
-    controller.handleKey({ type, key });
+  const handleKey = (e) => {
+    e.preventDefault();
+
+    controller.handleKey({ type: e.type, key: e.key });
   };
 
   window.addEventListener('keydown', handleKey);

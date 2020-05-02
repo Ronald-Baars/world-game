@@ -1,7 +1,7 @@
-export default () => {
+export default (animation, { sheet, data }, animationFrame) => {
 
-  return {
-    x: 0,
-    y: 0,
-  };
+  const { from, to } = data.meta.frameTags.find(({ name }) => name === animation);
+  const animationLength = to - from + 1;
+  const correctedAnimationFrame = from + (animationFrame % animationLength);
+  return data.frames[`${correctedAnimationFrame}`].frame;
 }
