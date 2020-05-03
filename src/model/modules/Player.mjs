@@ -47,13 +47,26 @@ class Player {
   }
 
   switchAnimation() {
+    
+    // This is used to be able to pause an animation for a few times
+    if (this.pauseAnimation > 0) { this.pauseAnimation -= 1; return; }
+    
+    const oldDirection = this.direction;
     this.direction = this.horVelocity > 0 ? `right` : `left`;
 
-    if (Math.abs(this.horVelocity) > 1) {
+    if (oldDirection !== this.direction && oldDirection !== `flip`) {
+      this.direction = `flip`;
+      this.pauseAnimation = 1;
+    }
+
+    if (Math.abs(this.horVelocity) > 0.5) {
       this.animation = `walk`;
+      return;
     } else {
       this.animation = `stand`;
+      return;
     }
+
   }
 
   render() {
