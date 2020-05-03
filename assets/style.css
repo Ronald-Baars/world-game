@@ -7,7 +7,7 @@
 html,
 body {
   margin: 0;
-  background: black;
+  background: black linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
   color: white;
   height: 100vh;
   width: 100vw;

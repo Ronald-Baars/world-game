@@ -6,6 +6,8 @@ class View {
     this.width = 426;
     this.height = 240;
 
+    this.context.canvas.width = this.width;
+    this.context.canvas.width = this.width;
     this.context.width = this.width;
     this.context.width = this.width;
 
@@ -16,28 +18,56 @@ class View {
     this.cameraPositionY = 0;
   }
 
-  ajustCamera(player) {
+  ajustCamera(renderer, player) {
 
-    this.horCameraVelocity = (player.positionX - this.cameraPositionX) * this.cameraSpeed;
-    this.verCameraVelocity = (player.positionY - this.cameraPositionY) * this.cameraSpeed;
+    const playerX = player.positionX + (player.width / 2);
+    const cameraXTarget = playerX - (this.width / 4);
+    const differenceX = this.cameraPositionX - cameraXTarget;
+    this.cameraPositionX = this.cameraPositionX - (differenceX * this.cameraSpeed);
 
-    // Tween the camera movements
-    this.cameraPositionX = this.cameraPositionX + this.horCameraVelocity;
-    this.cameraPositionY = this.cameraPositionY + this.verCameraVelocity;
+    const playerY = player.positionY + (player.height / 2);
+    const cameraYTarget = playerY - (this.height/2);
+    const differenceY = this.cameraPositionY - cameraYTarget;
+    this.cameraPositionY = this.cameraPositionY - (differenceY * this.cameraSpeed);
+
+    if (this.cameraPositionX < 0) {
+      this.cameraPositionX = 0;
+    }
+
+    if (this.cameraPositionY < 0) {
+      this.cameraPositionY = 0;
+      this.horCameraVelocity = 0;
+    }
+
+    if (this.cameraPositionY + this.height > renderer.height) {
+      this.cameraPositionY = renderer.height - this.height;
+    }
+
+    if (this.cameraPositionX + this.width > renderer.width) {
+      this.cameraPositionX = renderer.width - this.width;
+    }
+
+    this.cameraPositionX = Math.floor(this.cameraPositionX);
+    this.cameraPositionY = Math.floor(this.cameraPositionY);
 
   }
 
   // Draw the buffer canvas to the final display canvas
   render(renderer, player) {
+
+    // Warn if the world is smaller than the viewport
+    if (renderer.height < this.height || renderer.width < this.width) {
+      console.error(`The world is too small. Minimum size is ${this.width}x${this.height}`);
+    }
+    
     // Clear the stage
     this.context.clearRect(0, 0, this.width, this.height);
 
     // Ajust the camera
-    this.ajustCamera(player);
-
+    this.ajustCamera(renderer, player);
+    
     // Draw the renderer canvas to the final canvas
-    this.context.drawImage(renderer, Math.floor(-this.cameraPositionX + (this.width / 4)), Math.floor(-this.cameraPositionY + (this.height / 4)));
-    // this.context.drawImage(renderer, 0, 0);
+    this.context.drawImage(renderer, -this.cameraPositionX, -this.cameraPositionY);    
   }
 }
 

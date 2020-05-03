@@ -1,0 +1,102 @@
+{ "frames": [
+   {
+    "filename": "scenery_day_0",
+    "frame": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "scenery_day_1",
+    "frame": { "x": 104, "y": 0, "w": 104, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "scenery_day_2",
+    "frame": { "x": 208, "y": 0, "w": 104, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "scenery_day_3",
+    "frame": { "x": 312, "y": 0, "w": 104, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "scenery_day_4",
+    "frame": { "x": 416, "y": 0, "w": 104, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "scenery_day_5",
+    "frame": { "x": 520, "y": 0, "w": 104, "h": 32 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 104, "h": 32 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.18",
+  "image": "scenery_day.png",
+  "format": "RGBA8888",
+  "size": { "w": 624, "h": 32 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "grow", "from": 0, "to": 5, "direction": "forward" }
+  ],
+  "slices": [
+   { "name": "vegetation_bulrush", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 32, "y": 0, "w": 8, "h": 8 } }, { "frame": 2, "bounds": {"x": 32, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_grass-1", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 8, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_grass-2", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 16, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_grass-3", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 24, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_bush", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 40, "y": 0, "w": 8, "h": 8 } }, { "frame": 2, "bounds": {"x": 40, "y": 0, "w": 8, "h": 8 } }, { "frame": 3, "bounds": {"x": 40, "y": 0, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 40, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "land_grass", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 16, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 16, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_grass-to-dirt", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 24, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 24, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_grass-to-fullgrass", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 32, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 32, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_fullgrass-top", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 40, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 40, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_fullgrass-to-grass", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 48, "y": 8, "w": 8, "h": 8 } }, { "frame": 1, "bounds": {"x": 48, "y": 8, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 48, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 48, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 0, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "background_dirt-to-cave", "color": "#a5a5a7ff", "keys": [{ "frame": 0, "bounds": {"x": 8, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 8, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "background_lightcave", "color": "#a5a5a7ff", "keys": [{ "frame": 0, "bounds": {"x": 16, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 16, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "background_cave-to-dirt", "color": "#a5a5a7ff", "keys": [{ "frame": 0, "bounds": {"x": 24, "y": 16, "w": 8, "h": 8 } }, { "frame": 1, "bounds": {"x": 24, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 24, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt-bottom", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 24, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 0, "y": 24, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 0, "y": 24, "w": 8, "h": 8 } }] },
+   { "name": "background_lightcave-to-cave", "color": "#a5a5a7ff", "keys": [{ "frame": 0, "bounds": {"x": 8, "y": 24, "w": 8, "h": 8 } }, { "frame": 1, "bounds": {"x": 8, "y": 24, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 8, "y": 24, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 8, "y": 24, "w": 8, "h": 8 } }] },
+   { "name": "background_cave", "color": "#a5a5a7ff", "keys": [{ "frame": 0, "bounds": {"x": 16, "y": 24, "w": 8, "h": 8 } }, { "frame": 1, "bounds": {"x": 16, "y": 24, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 16, "y": 24, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 16, "y": 24, "w": 8, "h": 8 } }] },
+   { "name": "background_cave-to-lightcave", "color": "#a5a5a7ff", "keys": [{ "frame": 0, "bounds": {"x": 24, "y": 24, "w": 8, "h": 8 } }, { "frame": 1, "bounds": {"x": 24, "y": 24, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 24, "y": 24, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt-to-sand", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 56, "y": 16, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 56, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 56, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "land_sand", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 8, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 64, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 64, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_sand-to-dirt", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 72, "y": 16, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 72, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 72, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt-to-sand-bottom-right", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 56, "y": 8, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 56, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 56, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt-to-sand-bottom-left", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 72, "y": 8, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 72, "y": 8, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 72, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_fullgrass", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 40, "y": 16, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 40, "y": 16, "w": 8, "h": 8 } }] },
+   { "name": "land_fullgrass-bottom", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 40, "y": 24, "w": 8, "h": 8 } }, { "frame": 3, "bounds": {"x": 40, "y": 24, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 40, "y": 24, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 40, "y": 24, "w": 8, "h": 8 } }] },
+   { "name": "detail_waterdrop", "color": "#a5a5a7ff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 32, "y": 16, "w": 8, "h": 16 } }, { "frame": 5, "bounds": {"x": 32, "y": 16, "w": 8, "h": 16 } }] },
+   { "name": "vegetation_cactus", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 0, "w": 8, "h": 8 } }, { "frame": 3, "bounds": {"x": 64, "y": 0, "w": 8, "h": 8 } }, { "frame": 4, "bounds": {"x": 64, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_vines", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 56, "y": 0, "w": 8, "h": 8 } }, { "frame": 1, "bounds": {"x": 56, "y": 0, "w": 8, "h": 8 } }, { "frame": 2, "bounds": {"x": 56, "y": 0, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 56, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_rosebush", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 48, "y": 0, "w": 8, "h": 8 } }, { "frame": 3, "bounds": {"x": 48, "y": 0, "w": 8, "h": 8 } }, { "frame": 5, "bounds": {"x": 48, "y": 0, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt-top", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "land_dirt-to-grass", "color": "#f3ce52ff", "keys": [{ "frame": 0, "bounds": {"x": 8, "y": 8, "w": 8, "h": 8 } }] },
+   { "name": "vegetation_pinetree", "color": "#6acd5bff", "data": "animated", "keys": [{ "frame": 0, "bounds": {"x": 80, "y": 0, "w": 24, "h": 32 } }] }
+  ]
+ }
+}

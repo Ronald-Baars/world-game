@@ -13,7 +13,8 @@ const preloader = (callback) => {
   const assetsToLoad = {
     'sprite_player': `sprites/characters/player.png`,
     'sprite_player_data': `sprites/characters/player.json`,
-    'sprite_dirt': `sprites/land/dirt.png`
+    'sprite_scenery_day': `sprites/land/scenery_day.png`,
+    'sprite_scenery_day_data': `sprites/land/scenery_day.json`
   };
 
   const onLoadComplete = (loadedAssets) => {

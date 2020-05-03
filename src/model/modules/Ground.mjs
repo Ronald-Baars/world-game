@@ -1,7 +1,7 @@
 class Ground {
-  constructor(spriteSheet, x, y, width = 8, height = 8) {
-    this.width = width;
-    this.height = height;
+  constructor(spriteSheet, x, y) {
+    this.width = 8;
+    this.height = 8;
 
     this.spriteSheet = spriteSheet;
 
@@ -24,16 +24,18 @@ class Ground {
     this.positionY = y;
 
     this.testTimer = null;
+    this.shouldBeRendered = true;
   }
 
   update() {
-    this.render();
+    if (this.shouldBeRendered) {
+      this.render();
+      this.shouldBeRendered = false;
+    }
   }
 
   render() {
-    var pattern = this.renderer.createPattern(this.spriteSheet, `repeat`); // Create a pattern with this image, and set it to "repeat".
-    this.renderer.fillStyle = pattern;
-    this.renderer.fillRect(0, 0, this.width, this.height);
+    this.renderer.drawImage(this.spriteSheet, -16, -8);
   }
 
 }
