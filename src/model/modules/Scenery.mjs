@@ -6,7 +6,7 @@ class Scenery {
     this.spriteSheet = spriteSheet;
     this.isStatic = true;
     this.isSolid = false;
-    this.animationRadius = 180;
+    this.animationRadius = 300;
 
     // Check if we can find the data about the requested slice
     const sliceData = spriteData.meta.slices.find(slice => slice.name === this.sliceId);
@@ -40,7 +40,7 @@ class Scenery {
       
       const distance = Math.abs(playerX - this.positionX);
       if (distance > this.animationRadius) return;    
-      const newFrame = this.frameBounds.length - Math.floor((this.frameBounds.length / this.animationRadius) * (distance - (this.animationRadius / 5))) - 2;
+      const newFrame = this.frameBounds.length - Math.floor((this.frameBounds.length / this.animationRadius) * (distance - (this.animationRadius / 2))) - 2;
     
       // Only go to the new frame if it's bigger than the current one
       if (newFrame > this.currentFrame) {

@@ -2,6 +2,7 @@ import getElementAtLocation from '../helpers/getElementAtLocation.mjs';
 import Player from './Player.mjs';
 import Ground from './Ground.mjs';
 import Scenery from './Scenery.mjs';
+import Particles from './Particles.mjs';
 
 class World {
   constructor(assets) {
@@ -27,6 +28,7 @@ class World {
         new Scenery(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `vegetation_bulrush`, 300, 92),
         new Scenery(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `vegetation_bulrush`, 332, 92),
         new Scenery(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `vegetation_pinetree`, 332, 68),
+        new Particles(5, 240, 34, 128, 64),
 
       ],
       level: [
@@ -101,6 +103,7 @@ class World {
         new Scenery(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `vegetation_bulrush`, 308, 92),
         new Scenery(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `vegetation_cactus`, 316, 92),
         new Scenery(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `vegetation_bulrush`, 324, 92),
+        new Particles(5, 240, 34, 128, 64),
       ],
     };
 

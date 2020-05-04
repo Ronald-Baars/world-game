@@ -41,6 +41,7 @@ class Player {
     // Can be one of the following:
     // - standing
     // - walking
+    // - falling
     // - jumping
     // - dashing
     // - flying
@@ -104,8 +105,13 @@ class Player {
       this.pauseAnimation = 1;
     }
 
-    // If we're jumping, falling or flying, don't change walking animations
-    if (this.isInAir) return;
+    // If we're in the air, but not jumping or flying, we're falling
+    if (this.isInAir && ![`jumping`, `flying`, `dashing`].includes(this.action)) {
+      this.action = `falling`;
+      return;
+    } else if (this.isInAir) {
+      return;
+    }
 
     // If the speed is high enough, show the walking animation
     if (Math.abs(this.horVelocity) > 0.5) {
@@ -138,8 +144,6 @@ class Player {
       this.verVelocity -= 3;
       return;
     }
-
-    console.log(this.isInAir);
 
     // If not, check if we're standing on a surface
     if (!this.isInAir) {

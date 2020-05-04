@@ -34,7 +34,17 @@ if (typeof process !== `undefined`) {
     console.info(curStyle(input.join(` `).replace(`{time}`, time()).replace(`{date}`, date())));
   };
 } else {
-  log = (...input) => console.info(`%c🚀 ${input.join(`\n\r📎 `)}`, `color: rgb(29, 169, 213); font-size: 13px; font-family: 'Operator Mono Lig', 'Fira Code', Menlo, Monaco, 'Courier New', monospace;`);
+
+
+  log = (...input) => {
+    let color = `#1daad5`;
+    let emoji = `🚀`;
+    if (input.join(``).toLowerCase().includes(`warning`)) {
+      color = `#cf8d1b`;
+      emoji = `👮‍♂️`;
+    } 
+    console.info(`%c${emoji} ${input.join(`\n\r📎 `)}`, `color: ${color}; font-size: 13px; font-family: 'Operator Mono Lig', 'Fira Code', Menlo, Monaco, 'Courier New', monospace;`);
+  };
 }
 
 export default log;
