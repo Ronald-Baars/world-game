@@ -158,6 +158,14 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
     "sourceSize": { "w": 16, "h": 16 },
     "duration": 70
+   },
+   "20": {
+    "frame": { "x": 320, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 },
+    "duration": 70
    }
  },
  "meta": {
@@ -165,17 +173,17 @@
   "version": "1.2.18",
   "image": "player.png",
   "format": "RGBA8888",
-  "size": { "w": 320, "h": 16 },
+  "size": { "w": 336, "h": 16 },
   "scale": "1",
   "frameTags": [
-   { "name": "jumping_left", "from": 0, "to": 1, "direction": "forward" },
-   { "name": "walking_left", "from": 2, "to": 7, "direction": "forward" },
-   { "name": "standing_left", "from": 8, "to": 8, "direction": "forward" },
-   { "name": "standing_flip", "from": 9, "to": 9, "direction": "forward" },
-   { "name": "walking_flip", "from": 10, "to": 10, "direction": "forward" },
-   { "name": "standing_right", "from": 11, "to": 11, "direction": "forward" },
-   { "name": "walking_right", "from": 12, "to": 17, "direction": "forward" },
-   { "name": "jumping_right", "from": 18, "to": 19, "direction": "forward" }
+   { "name": "jumping_left", "from": 1, "to": 2, "direction": "forward" },
+   { "name": "walking_left", "from": 3, "to": 8, "direction": "forward" },
+   { "name": "standing_left", "from": 9, "to": 9, "direction": "forward" },
+   { "name": "standing_flip", "from": 10, "to": 10, "direction": "forward" },
+   { "name": "walking_flip", "from": 11, "to": 11, "direction": "forward" },
+   { "name": "standing_right", "from": 12, "to": 12, "direction": "forward" },
+   { "name": "walking_right", "from": 13, "to": 18, "direction": "forward" },
+   { "name": "jumping_right", "from": 19, "to": 20, "direction": "forward" }
   ],
   "slices": [
   ]
