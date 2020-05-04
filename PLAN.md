@@ -27,3 +27,32 @@ aren't there...
 <!-- The story has a ground-shaking family revelation. -->
 <!-- someone in the story will make a big decision that is irreversible. -->
 <!-- A natural disaster will change everything. -->
+
+
+# Profile page:
+- Your friends
+- Your level
+- Collected flags
+- Collected souvenirs / trophies
+- Bank account (coins)
+  - Option to buy coins or receive coins by watching advertising
+
+# Coins can be used for
+- Flights
+- Special haircuts
+- Clothes
+
+# Advertising
+- After a level, to double the points
+- Once every 30 minutes for free souvenir
+
+# Main menu
+- Profile
+- 
+
+# NOTES
+- Keep the currency simple and understandable. Maximum 1 type of currency.
+
+
+
+The menu of the game is a world map, with per continent the flags of the countries you visited.

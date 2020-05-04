@@ -3,13 +3,8 @@
 class View {
   constructor(canvas) {
     this.context = canvas.getContext(`2d`);
-    this.width = 426;
-    this.height = 240;
-
-    this.context.canvas.width = this.width;
-    this.context.canvas.width = this.width;
-    this.context.width = this.width;
-    this.context.width = this.width;
+    
+    this.resize();
 
     this.cameraSpeed = 0.3;
     this.horCameraVelocity = 0;
@@ -52,11 +47,33 @@ class View {
 
   }
 
+  resize() {
+    this.aspectRatio = window.innerWidth / window.innerHeight;
+    const tallestAspectRatio = 4 / 3;
+    const widestAspectRatio = 21 / 9;
+
+    this.height = 160;
+
+    // Check if the aspect ratio doesn't go too far out of proportion. Correct
+    // it if needed
+    this.width = this.aspectRatio > widestAspectRatio
+    ? this.height * widestAspectRatio
+    : this.aspectRatio < tallestAspectRatio
+      ? this.height * tallestAspectRatio
+      : this.height * this.aspectRatio;
+
+    this.context.canvas.width = this.width;
+    this.context.canvas.height = this.height;
+    this.context.width = this.width;
+    this.context.height = this.height;
+  }
+
   // Draw the buffer canvas to the final display canvas
   render(renderer, player) {
 
     // Warn if the world is smaller than the viewport
     if (renderer.height < this.height || renderer.width < this.width) {
+      // TODO: Make viewport zoom in if world is smaller.
       console.error(`The world is too small. Minimum size is ${this.width}x${this.height}`);
     }
     

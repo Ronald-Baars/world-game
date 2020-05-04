@@ -4,11 +4,17 @@ import Controller from './controller/index.mjs';
 import Engine from './engine/index.mjs';
 import assetLoader from './helpers/assetLoader.mjs';
 
+
+
+/**********************************
+**            PRELOAD            **
+**********************************/
+
 // Make a place where we store all assets
 const assets = {};
 
 // Preload all the assets we will need during the game
-const preloader = (callback) => {
+const preloader = () => {
 
   const assetsToLoad = {
     'sprite_player': `sprites/characters/player.png`,
@@ -26,20 +32,41 @@ const preloader = (callback) => {
     Object.assign(assets, loadedAssets);
 
     // Start the game
-    callback();
+    init();
   };
 
   assetLoader(assetsToLoad, onLoadComplete);
 };
 
+
+
+/********************************
+**          INITIALIZE         **
+**                         
+**  Called when the preloader  **
+** finished loading the assets **
+********************************/
+
 // After all assets are loaded, initialize the game
-preloader(() => {
+const init = () => {
+
+
+
+  /**********************************
+  **              MVC              **
+  **********************************/
 
   // Create the MVC structure
   const model = new Model(assets);
   const view = new View(document.querySelector(`canvas#game`));
   const controller = new Controller();
 
+
+
+  /**********************************
+  **             ENGINE            **
+  **********************************/
+  
   // Set up the render and update functions for the engine
   const render = () => {
     view.render(model.renderer.canvas, model.world.player);
@@ -50,24 +77,48 @@ preloader(() => {
 
     if (controller.left.active) { model.world.player.moveLeft(); }
     if (controller.right.active) { model.world.player.moveRight(); }
-    if (controller.up.active) { model.world.player.jump(); controller.up.active = false; }
+    if (controller.up.active) { model.world.player.jump(); controller.up.active = model.world.player.godMode; }
+    if (controller.g.active) { model.world.player.toggleGodmode(); controller.g.active = false;  }
 
     model.update();
   };
 
-  // Set up the engine
   const engine = new Engine(30, render, update);
 
-  // Add event listeners
-  const handleKey = (e) => {
-    e.preventDefault();
 
-    controller.handleKey({ type: e.type, key: e.key });
+
+  /**********************************
+  **        EVENT LISTENERS        **
+  **********************************/
+
+  // Add keyboard event listeners
+  const handleKey = (e) => {
+    controller.handleKey(e);
   };
 
   window.addEventListener(`keydown`, handleKey);
   window.addEventListener(`keyup`, handleKey);
 
-  // Start the engine
+  // Resize the viewport when the browser gets resized
+  const resize = () => {
+    view.resize();
+  };
+
+  window.addEventListener(`resize`, resize);
+
+
+
+  /**********************************
+  **        START THE ENGINE       **
+  **********************************/
+
   engine.start();
-});
+};
+
+
+
+/**********************************
+**      START THE PRELOADER      **
+**********************************/
+
+preloader();
