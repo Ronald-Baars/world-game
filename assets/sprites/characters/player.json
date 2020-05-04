@@ -126,22 +126,56 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
     "sourceSize": { "w": 16, "h": 16 },
     "duration": 70
+   },
+   "16": {
+    "frame": { "x": 256, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 },
+    "duration": 70
+   },
+   "17": {
+    "frame": { "x": 272, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 },
+    "duration": 70
+   },
+   "18": {
+    "frame": { "x": 288, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 },
+    "duration": 70
+   },
+   "19": {
+    "frame": { "x": 304, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 },
+    "duration": 70
    }
  },
  "meta": {
   "app": "http://www.aseprite.org/",
-  "version": "1.2.17",
+  "version": "1.2.18",
   "image": "player.png",
   "format": "RGBA8888",
-  "size": { "w": 256, "h": 16 },
+  "size": { "w": 320, "h": 16 },
   "scale": "1",
   "frameTags": [
-   { "name": "walk_left", "from": 0, "to": 5, "direction": "forward" },
-   { "name": "stand_left", "from": 6, "to": 6, "direction": "forward" },
-   { "name": "stand_flip", "from": 7, "to": 7, "direction": "forward" },
-   { "name": "walk_flip", "from": 8, "to": 8, "direction": "forward" },
-   { "name": "stand_right", "from": 9, "to": 9, "direction": "forward" },
-   { "name": "walk_right", "from": 10, "to": 15, "direction": "forward" }
+   { "name": "jumping_left", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "walking_left", "from": 2, "to": 7, "direction": "forward" },
+   { "name": "standing_left", "from": 8, "to": 8, "direction": "forward" },
+   { "name": "standing_flip", "from": 9, "to": 9, "direction": "forward" },
+   { "name": "walking_flip", "from": 10, "to": 10, "direction": "forward" },
+   { "name": "standing_right", "from": 11, "to": 11, "direction": "forward" },
+   { "name": "walking_right", "from": 12, "to": 17, "direction": "forward" },
+   { "name": "jumping_right", "from": 18, "to": 19, "direction": "forward" }
   ],
   "slices": [
   ]

@@ -29,7 +29,6 @@ class Player {
     // Set Player specific variables
     this.horVelocity = 1;       // The horizontal speed of the user (1 to let the player face left)
     this.verVelocity = 0;       // The vertical speed of the player
-    this.animation = `stand`;   // The action the player is doing 
     this.direction = `right`;   // The direction the player is facing in
     this.animationFrame = 0;    // A counter for the current animation frame
     this.walkSpeed = 1.1;       // Speed of walking left and right
@@ -39,11 +38,14 @@ class Player {
     this.currentJumpDashes = 0; // A counter to count the amount of dashes in the current jump
     this.stepHeight = 4;        // The maximum height of an object to climb without jumping
 
-    // Actions
-    this.isStanding = false;    // True if the players feet are touching a surface and has no speed
-    this.isWalking = false;    // True if the players feet are touching a surface and has some speed
-    this.isJumping = false;     // True if the player is jumping (false when falling)
-    
+    // Can be one of the following:
+    // - standing
+    // - walking
+    // - jumping
+    // - dashing
+    // - flying
+    this.action = `standing`;
+    this.isInAir = false;
   }
 
 
@@ -59,8 +61,6 @@ class Player {
     // Calculate the new position of the player
     this.positionX = Math.round(this.positionX + this.horVelocity);
     this.positionY = Math.round(this.positionY + this.verVelocity);
-
-    if (this.isStanding && this.isJumping) this.isJumping = false;
     this.render();
   }
 
@@ -71,9 +71,9 @@ class Player {
   ********************************/
 
   render() {
-    const spritePosition = getSpriteFromSpritesheet(this.animation, this.direction, this.sprite, Math.floor(this.animationFrame));
+    const spritePosition = getSpriteFromSpritesheet(this.action, this.direction, this.sprite, Math.floor(this.animationFrame));
 
-    this.getCurrentAction();
+    this.getCurrentActionAnimation();
     // Draw the sprite
     this.renderer.clearRect(0, 0, this.width, this.height);
     this.renderer.drawImage(this.sprite.sheet, -spritePosition.x, -spritePosition.y);
@@ -91,7 +91,7 @@ class Player {
   ** and toggles action variables.         **
   ******************************************/
   
-  getCurrentAction() {
+  getCurrentActionAnimation() {
     
     // This is used to be able to pause an animation for a few times
     if (this.pauseAnimation > 0) { this.pauseAnimation -= 1; return; }
@@ -104,25 +104,24 @@ class Player {
       this.pauseAnimation = 1;
     }
 
+    // If we're jumping, falling or flying, don't change walking animations
+    if (this.isInAir) return;
+
     // If the speed is high enough, show the walking animation
     if (Math.abs(this.horVelocity) > 0.5) {
-      this.isWalking = true;
-      this.isStanding = false;
-      this.animation = `walk`;
-      return;
+      this.action = `walking`; 
     } else {
-      this.isWalking = false;
-      this.isStanding = true;
-      this.animation = `stand`;
-      return;
+      this.action = `standing`; 
     }
 
   }
 
 
+
   /********************************
   **     USER INPUT HANDLERS     **
   ********************************/
+  
   moveLeft() {
     this.horVelocity = Math.floor((this.horVelocity - this.walkSpeed) * 100) / 100;
   }
@@ -132,14 +131,24 @@ class Player {
   }
 
   jump() {
-    if (this.isStanding || this.godMode) {
-      this.isJumping = true;
-      this.isStanding = false;
-      this.isWalking = false;
+    // If we're in godmode, fly, fly away
+    if (this.godMode) {
+      this.isInAir = true;
+      this.action = `flying`;
+      this.verVelocity -= 3;
+      return;
+    }
 
+    console.log(this.isInAir);
+
+    // If not, check if we're standing on a surface
+    if (!this.isInAir) {
+      this.isInAir = true;
+      this.action = `jumping`;
       this.currentJumpDashes = this.maxDashCount;
-      this.verVelocity -= this.godMode ? 3 : this.jumpHeight;
-    } else if (this.currentJumpDashes > 0 && this.isJumping) {
+      this.verVelocity -= this.jumpHeight;
+    } else if (this.currentJumpDashes > 0 && this.action === `jumping` && this.isInAir) {
+      this.action = `dashing`; 
       this.currentJumpDashes -= 1;
       this.verVelocity -= this.jumpHeight;
     }

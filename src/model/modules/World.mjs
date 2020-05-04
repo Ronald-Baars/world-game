@@ -187,7 +187,7 @@ class World {
     ];
 
     // If there is a solid object below the player, she's standing
-    this.player.isStanding = !!belowPlayer.length;
+    this.player.isInAir = !belowPlayer.length;
 
     belowPlayer.forEach(element => {
       this.player.verVelocity = 0;
