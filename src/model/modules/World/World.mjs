@@ -1,8 +1,8 @@
-import getElementAtLocation from '../helpers/getElementAtLocation.mjs';
-import Player from './Player.mjs';
-import Ground from './Ground.mjs';
-import Scenery from './Scenery.mjs';
-import Particles from './Particles.mjs';
+import getElementAtLocation from '../../helpers/getElementAtLocation.mjs';
+import Player from './modules/Player/Player.mjs';
+import Ground from './modules/Ground/Ground.mjs';
+import Scenery from './modules/Scenery/Scenery.mjs';
+import Particles from './modules/Particles/Particles.mjs';
 
 class World {
   constructor(assets) {

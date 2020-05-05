@@ -1,0 +1,52 @@
+{ "frames": {
+   "map": {
+    "frame": { "x": 0, "y": 0, "w": 320, "h": 320 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 320 },
+    "sourceSize": { "w": 320, "h": 320 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.18",
+  "image": "map.png",
+  "format": "RGBA8888",
+  "size": { "w": 320, "h": 320 },
+  "scale": "1",
+  "slices": [
+   { "name": "coast_jungle_bottom", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 80, "w": 32, "h": 24 } }] },
+   { "name": "coast_jungle_bottom-left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 80, "y": 80, "w": 16, "h": 24 } }] },
+   { "name": "coast_jungle_bottom-right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 128, "y": 80, "w": 16, "h": 24 } }] },
+   { "name": "coast_jungle_left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 80, "y": 64, "w": 16, "h": 16 } }] },
+   { "name": "coast_jungle_right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 128, "y": 64, "w": 16, "h": 16 } }] },
+   { "name": "land_jungle", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 64, "w": 32, "h": 16 } }] },
+   { "name": "land_to-jungle_vertical", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 32, "w": 8, "h": 8 } }] },
+   { "name": "land_from-jungle_horizontal", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 32, "w": 8, "h": 8 } }] },
+   { "name": "land_to-jungle_horizontal", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 104, "y": 32, "w": 8, "h": 8 } }] },
+   { "name": "land_from-jungle_vertical", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 120, "y": 32, "w": 8, "h": 8 } }] },
+   { "name": "coast_desert_bottom-left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 160, "y": 88, "w": 16, "h": 16 } }] },
+   { "name": "coast_desert_bottom-right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 208, "y": 88, "w": 16, "h": 16 } }] },
+   { "name": "coast_desert_bottom", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 176, "y": 88, "w": 32, "h": 16 } }] },
+   { "name": "coast_desert_right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 208, "y": 64, "w": 16, "h": 24 } }] },
+   { "name": "coast_desert_left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 160, "y": 64, "w": 16, "h": 24 } }] },
+   { "name": "land_desert", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 176, "y": 64, "w": 32, "h": 24 } }] },
+   { "name": "coast_desert_top-left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 160, "y": 48, "w": 16, "h": 16 } }] },
+   { "name": "coast_desert_top", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 176, "y": 48, "w": 32, "h": 16 } }] },
+   { "name": "coast_desert_top-right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 208, "y": 48, "w": 16, "h": 16 } }] },
+   { "name": "coast_jungle_top-left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 80, "y": 48, "w": 16, "h": 16 } }] },
+   { "name": "coast_jungle_top", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 48, "w": 32, "h": 16 } }] },
+   { "name": "coast_jungle_top-right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 128, "y": 48, "w": 16, "h": 16 } }] },
+   { "name": "coast_snow_top-left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 86, "y": 126, "w": 10, "h": 10 } }] },
+   { "name": "coast_snow_top", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 126, "w": 32, "h": 10 } }] },
+   { "name": "coast_snow_top-right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 128, "y": 126, "w": 10, "h": 10 } }] },
+   { "name": "land_snow", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 136, "w": 32, "h": 24 } }] },
+   { "name": "coast_snow_right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 128, "y": 136, "w": 10, "h": 24 } }] },
+   { "name": "coast_snow_left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 86, "y": 136, "w": 10, "h": 24 } }] },
+   { "name": "coast_snow_bottom-left", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 86, "y": 160, "w": 10, "h": 10 } }] },
+   { "name": "coast_snow_bottom", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 160, "w": 32, "h": 10 } }] },
+   { "name": "coast_snow_bottom-right", "color": "#ff00ffff", "keys": [{ "frame": 0, "bounds": {"x": 128, "y": 160, "w": 10, "h": 10 } }] }
+  ]
+ }
+}

@@ -81,10 +81,14 @@ class View {
     this.context.clearRect(0, 0, this.width, this.height);
 
     // Ajust the camera
-    this.ajustCamera(renderer, player);
+    if (player) {
+      this.ajustCamera(renderer, player);
     
-    // Draw the renderer canvas to the final canvas
-    this.context.drawImage(renderer, -this.cameraPositionX, -this.cameraPositionY);    
+      // Draw the renderer canvas to the final canvas
+      this.context.drawImage(renderer, -this.cameraPositionX, -this.cameraPositionY);
+    } else {
+      this.context.drawImage(renderer, 0, 0);
+    }
   }
 }
 

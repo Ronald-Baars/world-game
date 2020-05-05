@@ -1,4 +1,4 @@
-import log from '../../helpers/log.mjs';
+import log from '../../../../../helpers/log.mjs';
 
 class Scenery {
   constructor(spriteSheet, spriteData, sliceId, x, y) {

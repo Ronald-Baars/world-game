@@ -1,4 +1,5 @@
-import getSpriteFromSpritesheet from '../helpers/getSpriteFromSpritesheet.mjs';
+import getSpriteFromSpritesheet from '../../../../helpers/getSpriteFromSpritesheet.mjs';
+
 class Player {
   constructor(spriteSheet, spriteData, spawnX, spawnY) {
 

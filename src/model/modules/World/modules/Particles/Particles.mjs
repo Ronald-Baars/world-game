@@ -1,15 +1,13 @@
 class Particle {
-  constructor(areaWidth, areaHeight) {
-    this.areaWidth = areaWidth;
-    this.areaHeight = areaHeight;
-    this.safetyMargin = Math.min(this.areaWidth, this.areaHeight, 100) / 5;
+  constructor( width, height ) {
+    this.width = width;
+    this.height = height;
+    this.safetyMargin = Math.min(this.width, this.height, 100) / 5;
     this.opacity = Math.random();
     this.isOutOfBounds = false;
 
-    console.log(this.safetyMargin);
-
-    this.x = this.safetyMargin + (Math.random() * (this.areaWidth - (this.safetyMargin * 2)));
-    this.y = this.safetyMargin + (Math.random() * (this.areaHeight - (this.safetyMargin * 2)));
+    this.x = this.safetyMargin + (Math.random() * (this.width - (this.safetyMargin * 2)));
+    this.y = this.safetyMargin + (Math.random() * (this.height - (this.safetyMargin * 2)));
 
     this.direction = Math.random() * 360;
     this.speed = 0.25 + (Math.random() / 4);
@@ -26,7 +24,7 @@ class Particle {
     }
 
     // If the particle is almost out of the area, turn it around
-    if (this.y < this.safetyMargin || this.y > this.areaHeight - this.safetyMargin || this.x < this.safetyMargin || this.x > this.areaWidth - this.safetyMargin) {
+    if (this.y < this.safetyMargin || this.y > this.height - this.safetyMargin || this.x < this.safetyMargin || this.x > this.width - this.safetyMargin) {
       if (this.turnRightOrLeft) {
         this.direction += this.safetyMargin * 0.4;
       } else {
@@ -49,12 +47,12 @@ class Particle {
   }
 }
 
-
 class Particles {
-  constructor(particleCount, x, y, width, height) {
+  constructor(particleCount, x, y, width, height, showBoundaries = false) {
     this.particleCount = particleCount;
     this.positionX = x;
     this.positionY = y;
+    this.showBoundaries = showBoundaries;
 
     // The pre-rendering canvas element to render the user on
     this.renderer = document.createElement(`canvas`).getContext(`2d`);
@@ -76,7 +74,6 @@ class Particles {
 
   render() {
     this.renderer.clearRect(0, 0, this.width, this.height);
-
     
     // Draw the particles
     this.particles.forEach(({ x, y, opacity }) => {
@@ -84,7 +81,7 @@ class Particles {
       this.renderer.fillRect(x, y, 0.7, 0.7);
     });
   
-    // this.renderer.strokeRect(0, 0, this.width, this.height);
+    if(this.showBoundaries) this.renderer.strokeRect(0, 0, this.width, this.height);
   }
 
 }

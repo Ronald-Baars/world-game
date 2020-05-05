@@ -1,4 +1,4 @@
-import World from './modules/World.mjs';
+import World from './modules/World/World.mjs';
 
 class Model {
   constructor(assets) {
@@ -9,7 +9,6 @@ class Model {
     this.renderer.canvas.width = this.world.width;
     this.renderer.canvas.height = this.world.height;
   }
-
 
   render() {
     // Clear the stage
