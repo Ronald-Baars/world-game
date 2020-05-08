@@ -5,7 +5,7 @@ import Scenery from './modules/Scenery/Scenery.mjs';
 import Fireflies from './modules/Fireflies/Fireflies.mjs';
 import Birds from './modules/Birds/Birds.mjs';
 
-class World {
+class Platformer {
   constructor(assets) {
 
     this.width = 800;
@@ -35,61 +35,64 @@ class World {
       level: [
 
         // Start platform
-        new Ground(assets.sprite_scenery_day, 0, 80),
-        new Ground(assets.sprite_scenery_day, 8, 80),
-        new Ground(assets.sprite_scenery_day, 16, 80),
-        new Ground(assets.sprite_scenery_day, 24, 80),
-        new Ground(assets.sprite_scenery_day, 32, 80),
-        new Ground(assets.sprite_scenery_day, 40, 80),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 0, 80),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 8, 80),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass-to-dirt`, 16, 80),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_dirt`, 24, 80),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_dirt-to-sand`, 32, 80),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 40, 80),
 
         // Shrubberies Platform
-        new Ground(assets.sprite_scenery_day, 84, 100),
-        new Ground(assets.sprite_scenery_day, 92, 92),
-        new Ground(assets.sprite_scenery_day, 100, 100),
-        new Ground(assets.sprite_scenery_day, 108, 100),
-        new Ground(assets.sprite_scenery_day, 116, 100),
-        new Ground(assets.sprite_scenery_day, 124, 100),
-        new Ground(assets.sprite_scenery_day, 132, 100),
-        new Ground(assets.sprite_scenery_day, 140, 100),
-        new Ground(assets.sprite_scenery_day, 148, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 84, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 92, 92),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 100, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass-to-grass`, 108, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 116, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 124, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 132, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 140, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass`, 148, 100),
 
         // Stairs
-        new Ground(assets.sprite_scenery_day, 156, 99),
-        new Ground(assets.sprite_scenery_day, 164, 96),
-        new Ground(assets.sprite_scenery_day, 172, 94),
-        new Ground(assets.sprite_scenery_day, 180, 90),
-        new Ground(assets.sprite_scenery_day, 188, 88),
-        new Ground(assets.sprite_scenery_day, 196, 88),
-        new Ground(assets.sprite_scenery_day, 204, 88),
-        new Ground(assets.sprite_scenery_day, 212, 88),
-        new Ground(assets.sprite_scenery_day, 220, 88),
-        new Ground(assets.sprite_scenery_day, 228, 92),
-        new Ground(assets.sprite_scenery_day, 236, 96),
-        new Ground(assets.sprite_scenery_day, 244, 96),
-        new Ground(assets.sprite_scenery_day, 252, 98),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_grass-to-fullgrass`, 156, 99),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 164, 96),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 172, 94),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 180, 90),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 188, 88),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 196, 88),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 204, 88),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 212, 88),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 220, 88),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 228, 92),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 236, 96),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 244, 96),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 252, 98),
 
         // Platform after stairs
-        new Ground(assets.sprite_scenery_day, 260, 100),
-        new Ground(assets.sprite_scenery_day, 268, 100),
-        new Ground(assets.sprite_scenery_day, 276, 100),
-        new Ground(assets.sprite_scenery_day, 284, 100),
-        new Ground(assets.sprite_scenery_day, 292, 100),
-        new Ground(assets.sprite_scenery_day, 300, 100),
-        new Ground(assets.sprite_scenery_day, 308, 100),
-        new Ground(assets.sprite_scenery_day, 316, 100),
-        new Ground(assets.sprite_scenery_day, 324, 100),
-        new Ground(assets.sprite_scenery_day, 332, 100),
-        new Ground(assets.sprite_scenery_day, 340, 100),
-        new Ground(assets.sprite_scenery_day, 348, 100),
-        new Ground(assets.sprite_scenery_day, 356, 100),
-        new Ground(assets.sprite_scenery_day, 364, 100),
-        new Ground(assets.sprite_scenery_day, 372, 100),
-        new Ground(assets.sprite_scenery_day, 380, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 260, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 268, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 276, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 284, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 292, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 300, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 308, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 316, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 324, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 332, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 340, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 348, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 356, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 364, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 372, 100),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_fullgrass`, 380, 100),
 
         // High platform
-        new Ground(assets.sprite_scenery_day, 84, 20),
-        new Ground(assets.sprite_scenery_day, 100, 20),
-        new Ground(assets.sprite_scenery_day, 116, 20),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 84, 48),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 92, 48),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 100, 48),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 108, 48),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 116, 48),
+        new Ground(assets.sprite_scenery_day, assets.sprite_scenery_day_data, `land_sand`, 124, 48),
       ],
 
       foreground: [
@@ -221,4 +224,4 @@ class World {
 
 }
 
-export default World;
+export default Platformer;

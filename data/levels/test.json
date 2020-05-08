@@ -3,49 +3,37 @@
     "background": [
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 100,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 132,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_pinetree",
+        "sprite": "vegetation_pinetree",
         "x": 132,
         "y": 68
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 300,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 332,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_pinetree",
+        "sprite": "vegetation_pinetree",
         "x": 332,
         "y": 68
       },
@@ -67,283 +55,283 @@
     "level": [
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 0,
         "y": 80
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 8,
         "y": 80
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 16,
         "y": 80
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 24,
         "y": 80
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 32,
         "y": 80
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 40,
         "y": 80
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 84,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 92,
         "y": 92
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 100,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 108,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 116,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 124,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 132,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 140,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 148,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 156,
         "y": 99
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 164,
         "y": 96
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 172,
         "y": 94
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 180,
         "y": 90
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 188,
         "y": 88
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 196,
         "y": 88
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 204,
         "y": 88
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 212,
         "y": 88
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 220,
         "y": 88
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 228,
         "y": 92
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 236,
         "y": 96
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 244,
         "y": 96
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 252,
         "y": 98
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 260,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 268,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 276,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 284,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 292,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 300,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 308,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 316,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 324,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 332,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 340,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 348,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 356,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 364,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 372,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 380,
         "y": 100
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 84,
         "y": 20
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 100,
         "y": 20
       },
       {
         "type": "Ground",
-        "asset_name": "sprite_scenery_day",
+        "sprite": "grass",
         "x": 116,
         "y": 20
       }
@@ -351,81 +339,61 @@
     "foreground": [
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_pinetree",
+        "sprite": "vegetation_pinetree",
         "x": 124,
         "y": 68
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 108,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_cactus",
+        "sprite": "vegetation_cactus",
         "x": 116,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 124,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_pinetree",
+        "sprite": "vegetation_pinetree",
         "x": 324,
         "y": 68
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_pinetree",
+        "sprite": "vegetation_pinetree",
         "x": 300,
         "y": 68
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_pinetree",
+        "sprite": "vegetation_pinetree",
         "x": 280,
         "y": 68
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 308,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_cactus",
+        "sprite": "vegetation_cactus",
         "x": 316,
         "y": 92
       },
       {
         "type": "Scenery",
-        "asset_name": "sprite_scenery_day",
-        "asset_data": "sprite_scenery_day_data",
-        "sprite_name": "vegetation_bulrush",
+        "sprite": "vegetation_bulrush",
         "x": 324,
         "y": 92
       },

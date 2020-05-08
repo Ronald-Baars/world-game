@@ -1,11 +1,11 @@
 import log from '../../../../../helpers/log.mjs';
 
 class Scenery {
-  constructor(spriteSheet, spriteData, sliceId, x, y) {
+  constructor(spriteSheet, spriteData, sliceId, x, y, isSolid = false) {
     this.sliceId = sliceId;
     this.spriteSheet = spriteSheet;
     this.isStatic = true;
-    this.isSolid = false;
+    this.isSolid = isSolid;
     this.animationRadius = 300;
 
     // Check if we can find the data about the requested slice
