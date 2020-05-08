@@ -1,4 +1,3 @@
-import log from '../helpers/log.mjs';
 import ButtonInput from './modules/ButtonInput.mjs';
 
 class Controller {
@@ -14,8 +13,6 @@ class Controller {
     const { type, key } = e;
     // true if the event type is keydown
     const down = type === `keydown`;
-
-    log(`Key ${key} ${down ? `down` : `up`}`);
 
     // Connect keys to ButtonInputs
     switch (key) {

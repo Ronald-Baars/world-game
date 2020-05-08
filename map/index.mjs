@@ -4,8 +4,8 @@ import assetLoader from '../src/helpers/assetLoader.mjs';
 const canvas = document.getElementById(`canvas`);
 const ctx = canvas.getContext(`2d`);
 
-canvas.width = 3000 / 3;
-canvas.height = 1354 / 3;
+canvas.width = 3128 / 4;
+canvas.height = 1482 / 4;
 
 const assetsToLoad = {
   'map': `sprites/map/map.png`,

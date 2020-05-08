@@ -1,26 +1,26 @@
-import World from './modules/World/World.mjs';
+import Platformer from './modules/Platformer/Platformer.mjs';
 
 class Model {
   constructor(assets) {
     this.assets = assets;
-    this.world = new World(assets);
+    this.game = new Platformer(assets);
 
     this.renderer = document.createElement(`canvas`).getContext(`2d`);
-    this.renderer.canvas.width = this.world.width;
-    this.renderer.canvas.height = this.world.height;
+    this.renderer.canvas.width = this.game.width;
+    this.renderer.canvas.height = this.game.height;
   }
 
   render() {
     // Clear the stage
-    this.renderer.clearRect(0, 0, this.world.width, this.world.height);
+    this.renderer.clearRect(0, 0, this.game.width, this.game.height);
 
     // Draw the player
-    this.renderer.drawImage(this.world.renderer.canvas, 0, 0);
+    this.renderer.drawImage(this.game.renderer.canvas, 0, 0);
   }
 
   update() {
     // Run the update function
-    this.world.update();
+    this.game.update();
     this.render();
   }
 }

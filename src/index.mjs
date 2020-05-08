@@ -69,16 +69,16 @@ const init = () => {
   
   // Set up the render and update functions for the engine
   const render = () => {
-    view.render(model.renderer.canvas, model.world.player);
+    view.render(model.renderer.canvas, model.game.player);
   };
 
   // This runs every frame to update all the elements in the game
   const update = () => {
 
-    if (controller.left.active) { model.world.player.moveLeft(); }
-    if (controller.right.active) { model.world.player.moveRight(); }
-    if (controller.up.active) { model.world.player.jump(); controller.up.active = model.world.player.godMode; }
-    if (controller.g.active) { model.world.player.toggleGodmode(); controller.g.active = false;  }
+    if (controller.left.active) { model.game.player.moveLeft(); }
+    if (controller.right.active) { model.game.player.moveRight(); }
+    if (controller.up.active) { model.game.player.jump(); controller.up.active = model.game.player.godMode; }
+    if (controller.g.active) { model.game.player.toggleGodmode(); controller.g.active = false;  }
 
     model.update();
   };
