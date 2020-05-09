@@ -48,8 +48,8 @@ class Firefly {
 }
 
 class Fireflies {
-  constructor(fireflyCount, x, y, width, height, showBoundaries = false) {
-    this.fireflyCount = fireflyCount;
+  constructor({ count, x, y, width, height, showBoundaries = false }) {
+    this.fireflyCount = count;
     this.positionX = x;
     this.positionY = y;
     this.showBoundaries = showBoundaries;
@@ -62,7 +62,7 @@ class Fireflies {
     this.renderer.canvas.height = this.height = height;
 
     this.fireflies = [];
-    for (let i = 0; i < fireflyCount; i++) {
+    for (let i = 0; i < count; i++) {
       this.fireflies.push(new Firefly(this.width, this.height));
     }
   }

@@ -5,9 +5,9 @@ const importer = ([id, src]) => {
       const image = new Image();
       image.addEventListener(`load`, () => resolve({ id, asset: image }));
       image.addEventListener(`error`, () => reject({ id, asset: null }));
-      image.src = `../assets/${src}`;
+      image.src = `/assets/${src}`;
     } else if (src.includes(`.json`)) {
-      fetch(`../assets/${src}`)
+      fetch(`/assets/${src}`)
         .then(response => response.json())
         .then(data => resolve({ id, asset: data }))
         .catch(() => reject({ id, asset: null }));

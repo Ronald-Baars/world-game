@@ -1,7 +1,7 @@
 import log from '../../../../../helpers/log.mjs';
 
 class Ground {
-  constructor(spriteSheet, spriteData, sliceId, x, y, isSolid = true) {
+  constructor({ spriteSheet, spriteData, sliceId, x, y, isSolid = true }) {
     this.sliceId = sliceId;
     this.spriteSheet = spriteSheet;
     this.isStatic = true;

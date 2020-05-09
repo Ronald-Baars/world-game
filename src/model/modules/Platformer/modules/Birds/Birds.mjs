@@ -42,7 +42,7 @@ class Bird {
 }
 
 class Birds {
-  constructor(birdCount, x, y, showBoundaries = false) {
+  constructor({ count, x, y, showBoundaries = false }) {
     this.positionX = x; // The x position of the renderer canvas
     this.positionY = 0; // The y position of the renderer canvas
   
@@ -57,7 +57,7 @@ class Birds {
     this.triggered = false; // True if the player is close enough to chase the birds away
     
     // Add the birds to the array
-    for (let i = 0; i < birdCount; i++) this.birds.push(new Bird(this.width, this.height));
+    for (let i = 0; i < count; i++) this.birds.push(new Bird(this.width, this.height));
 
     // Initial render
     this.render();

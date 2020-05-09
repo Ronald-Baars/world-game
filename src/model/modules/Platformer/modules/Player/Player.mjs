@@ -1,7 +1,7 @@
 import getSpriteFromSpritesheet from '../../../../helpers/getSpriteFromSpritesheet.mjs';
 
 class Player {
-  constructor(spriteSheet, spriteData, spawnX, spawnY) {
+  constructor( spriteSheet, spriteData, x, y ) {
 
     this.sprite = {
       sheet: spriteSheet,
@@ -24,8 +24,8 @@ class Player {
     };
 
     // The spawn position of the player
-    this.positionX = spawnX;
-    this.positionY = spawnY;
+    this.positionX = x;
+    this.positionY = y;
 
     // Set Player specific variables
     this.horVelocity = 1;       // The horizontal speed of the user (1 to let the player face left)

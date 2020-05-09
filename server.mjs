@@ -11,7 +11,8 @@ log(`cyan,bold`, `⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽�
 app.use(`/assets`, express.static(`${__dirname}/assets/`));
 app.use(`/vendor`, express.static(`${__dirname}/vendor/`));
 app.use(`/src`, express.static(`${__dirname}/src/`));
-app.use(`/map`, express.static(`${__dirname}/map/`));
+app.use(`/tools/world-map`, express.static(`${__dirname}/tools/world-map/`));
+app.use(`/tools/map-maker`, express.static(`${__dirname}/tools/map-maker/`));
 
 // Send index.html
 app.get(`/`, (req, res) => res.sendFile(`${__dirname}/src/index.html`));

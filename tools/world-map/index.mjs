@@ -1,5 +1,5 @@
 import drawMap from './helpers/drawMap.mjs';
-import assetLoader from '../src/helpers/assetLoader.mjs';
+import assetLoader from '../../src/helpers/assetLoader.mjs';
 
 const canvas = document.getElementById(`canvas`);
 const ctx = canvas.getContext(`2d`);

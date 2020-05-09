@@ -1,7 +1,7 @@
 import log from '../../../../../helpers/log.mjs';
 
 class Scenery {
-  constructor(spriteSheet, spriteData, sliceId, x, y, isSolid = false) {
+  constructor({ spriteSheet, spriteData, sliceId, x, y, isSolid = false }) {
     this.sliceId = sliceId;
     this.spriteSheet = spriteSheet;
     this.isStatic = true;

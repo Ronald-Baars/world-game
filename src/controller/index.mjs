@@ -15,15 +15,15 @@ class Controller {
     const down = type === `keydown`;
 
     // Connect keys to ButtonInputs
-    switch (key) {
+    switch (key.toLowerCase()) {
       // ARROW LEFT: Walk left
-      case `ArrowLeft`: this.left.setInput(down, e); break;
+      case `arrowleft`: this.left.setInput(down, e); break;
 
       // ARROW RIGHT: Walk right
-      case `ArrowRight`: this.right.setInput(down, e); break;
+      case `arrowright`: this.right.setInput(down, e); break;
 
       // ARROW UP: Jump
-      case `ArrowUp`: this.up.setInput(down, e); break;
+      case `arrowup`: this.up.setInput(down, e); break;
 
       // SPACEBAR: Jump / up
       case ` `: this.up.setInput(down, e); break;

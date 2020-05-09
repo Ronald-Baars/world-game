@@ -20,7 +20,8 @@ const preloader = () => {
     'sprite_player': `sprites/characters/player.png`,
     'sprite_player_data': `sprites/characters/player.json`,
     'sprite_scenery_day': `sprites/land/scenery_day.png`,
-    'sprite_scenery_day_data': `sprites/land/scenery_day.json`
+    'sprite_scenery_day_data': `sprites/land/scenery_day.json`,
+    'platformer_level_1': `levels/test.json`,
   };
 
   const onLoadComplete = (loadedAssets) => {
