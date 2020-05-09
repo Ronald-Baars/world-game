@@ -1,6 +1,13 @@
+let isFirstRun = true;
 export default ({ gridSize, width, height, ctx }) => {
-  width = ctx.width = ctx.canvas.width = width * gridSize;
-  height = ctx.height = ctx.canvas.height = height * gridSize;
+  if (isFirstRun) {
+    isFirstRun = false;
+    width = ctx.width = ctx.canvas.width = width * gridSize;
+    height = ctx.height = ctx.canvas.height = height * gridSize;
+  } else {
+    width = width * gridSize;
+    height = height * gridSize;
+  }
   
   let curX = 0;
   let curY = 0;
