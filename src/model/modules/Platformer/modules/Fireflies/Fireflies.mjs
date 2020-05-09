@@ -84,7 +84,7 @@ class Fireflies {
       this.renderer.fillRect(x, y, 0.7, 0.7);
     });
   
-    if(this.showBoundaries) this.renderer.strokeRect(0, 0, this.width, this.height);
+    if (this.showBoundaries) this.renderer.strokeRect(0, 0, this.width, this.height);
   }
 
 }

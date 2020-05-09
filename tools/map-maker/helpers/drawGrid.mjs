@@ -24,7 +24,4 @@ export default ({ gridSize, width, height, ctx }) => {
     ctx.lineTo(width, curY);
     ctx.stroke();
   }
-
-
-
 };

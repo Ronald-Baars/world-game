@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "extends": [
     "eslint:recommended",
     "plugin:node/recommended"
@@ -22,6 +25,25 @@
       {
         "avoidEscape": true
       }
+    ],
+    "space-unary-ops": [
+      2,
+      {
+        "words": true,
+        "nonwords": false,
+        "overrides": {
+          "!": false
+        }
+      }
+    ],
+    "keyword-spacing": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "rest-spread-spacing": [
+      "error",
+      "never"
     ],
     "node/no-extraneous-require": [
       "error",

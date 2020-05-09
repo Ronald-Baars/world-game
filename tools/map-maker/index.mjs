@@ -13,12 +13,20 @@ const assetsToLoad = {
 };
 
 const onLoadComplete = (loadedAssets) => {
-  drawGrid({
-    gridSize: 8, 
-    width: 100, 
-    height: 40, 
-    ctx: ctx,
-    assets: loadedAssets
+  const gridSize = 16;
+  const width = 100;
+  const height = 40;
+  const assets= loadedAssets;
+
+  drawGrid({ gridSize, width, height, ctx, assets });
+
+  canvas.addEventListener(`click`, e => {
+    const x = e.x - e.target.getBoundingClientRect().x - 2;
+    const y = e.y - e.target.getBoundingClientRect().y - 2;
+
+    if (x < 0 || y < 0 || x > width * gridSize || y > height * gridSize) return;
+
+    console.log(x, y);
   });
   
 };

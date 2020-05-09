@@ -85,7 +85,7 @@ class Birds {
     this.birds.forEach(({ x, y, size }) => this.renderer.fillRect(x, y, size, size));
     
     // Debug: Draw the renderers boundaries
-    if(this.showBoundaries) this.renderer.strokeRect(0, 0, this.width, this.height);
+    if (this.showBoundaries) this.renderer.strokeRect(0, 0, this.width, this.height);
   }
 }
 
