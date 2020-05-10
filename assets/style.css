@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Pixel Art';
-  src: url('fonts/Pixel-Art.eot');
-  src: url('fonts/Pixel-Art.eot?#iefix') format('embedded-opentype'), url('fonts/Pixel-Art.woff2') format('woff2'), url('fonts/Pixel-Art.woff') format('woff'), url('fonts/Pixel-Art.ttf') format('truetype'), url('fonts/Pixel-Art.svg#Pixel-Art') format('svg');
+  src: url('/fonts/Pixel-Art.eot');
+  src: url('/fonts/Pixel-Art.eot?#iefix') format('embedded-opentype'), url('/fonts/Pixel-Art.woff2') format('woff2'), url('/fonts/Pixel-Art.woff') format('woff'), url('/fonts/Pixel-Art.ttf') format('truetype'), url('/fonts/Pixel-Art.svg#Pixel-Art') format('svg');
 }
 
 html,

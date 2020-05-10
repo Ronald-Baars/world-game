@@ -2,6 +2,7 @@ import assetLoader from '../../src/helpers/assetLoader.mjs';
 import drawGrid from './helpers/drawGrid.mjs';
 import drawElements from './helpers/drawElements.mjs';
 import Element from './helpers/Element.mjs';
+import setupToolbar from './helpers/setupToolbar.mjs';
 
 const canvas = document.getElementById(`canvas`);
 const ctx = canvas.getContext(`2d`);
@@ -28,17 +29,16 @@ const onLoadComplete = (loadedAssets) => {
   let selectedSliceId = `land_grass`;
   let selectedElementType = `Ground`;
 
+  setupToolbar({
+    assets, onSelect: (material) => {
+      selectedSliceId = material;
+  } });
   drawGrid({ gridSize, width, height, ctx, assets });
 
-  canvas.addEventListener(`mousedown`, (e) => {
-    mouseDown = true;
-    drawing = !elements.find(element => element.x === (Math.floor((e.x - e.target.getBoundingClientRect().x - 2) / gridSize)) * gridSize && element.y === (Math.floor((e.y - e.target.getBoundingClientRect().y - 2) / gridSize)) * gridSize);
-  });
-  canvas.addEventListener(`mouseup`, () => mouseDown = false);
-  canvas.addEventListener(`mousemove`, e => {
+  const draw = (e) => {
     if (!mouseDown) return;
-    const x = e.x - e.target.getBoundingClientRect().x - 2;
-    const y = e.y - e.target.getBoundingClientRect().y - 2;
+    const x = e.x - e.target.getBoundingClientRect().x;
+    const y = e.y - e.target.getBoundingClientRect().y;
 
     if (x < 0 || y < 0 || x > width * gridSize || y > height * gridSize) return;
 
@@ -63,7 +63,17 @@ const onLoadComplete = (loadedAssets) => {
     ctx.clearRect(0, 0, width * gridSize, height * gridSize);
     drawGrid({ gridSize, width, height, ctx, assets });
     drawElements({ ctx, elements, loadedAssets, zoom });
+  };
+  
+
+  canvas.addEventListener(`mouseup`, () => mouseDown = false);
+  canvas.addEventListener(`mousemove`, draw);
+  canvas.addEventListener(`mousedown`, (e) => {
+    mouseDown = true;
+    drawing = !elements.find(element => element.x === (Math.floor((e.x - e.target.getBoundingClientRect().x - 2) / gridSize)) * gridSize && element.y === (Math.floor((e.y - e.target.getBoundingClientRect().y - 2) / gridSize)) * gridSize);
+    draw(e);
   });
+
   
 };
 
